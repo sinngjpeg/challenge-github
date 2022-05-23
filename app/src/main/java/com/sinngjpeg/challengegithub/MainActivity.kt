@@ -1,11 +1,15 @@
 package com.sinngjpeg.challengegithub
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.sinngjpeg.challengegithub.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        Thread.sleep(1000L)
+        setTheme(R.style.Theme_ChallengeGithub)
+        setContentView(binding.root)
     }
 }
