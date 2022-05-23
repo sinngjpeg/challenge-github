@@ -1,7 +1,8 @@
-package com.sinngjpeg.challengegithub
+package com.sinngjpeg.challengegithub.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.sinngjpeg.challengegithub.R
 import com.sinngjpeg.challengegithub.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
