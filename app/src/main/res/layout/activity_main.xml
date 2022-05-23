@@ -9,14 +9,40 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#eeeeee"
         android:orientation="horizontal">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id='@+id/recycle_view'
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/item_repository" />
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_repository"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:titleTextColor="@color/white"
+                android:backgroundTint="#373737"
+                android:elevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:title="@string/app_name" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id='@+id/recycle_view'
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar_repository"
+                tools:listitem="@layout/item_repository" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ProgressBar
             android:id="@+id/progress_bar"

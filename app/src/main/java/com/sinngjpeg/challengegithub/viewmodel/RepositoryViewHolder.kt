@@ -15,15 +15,15 @@ class RepositoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         itemView.findViewById(R.id.txt_repository_description)
     private val repositoryAuthor: TextView = itemView.findViewById(R.id.txt_repository_author)
     private val avatar: ImageView = itemView.findViewById(R.id.iv_user)
-//    private val forks: TextView = itemView.findViewById(R.id.forks_txt)
-//    private val stars: TextView = itemView.findViewById(R.id.stars_txt)
+    private val forks: TextView = itemView.findViewById(R.id.txt_forks)
+    private val stars: TextView = itemView.findViewById(R.id.txt_stars)
 
     fun bind(item: Item) {
         repositoryName.text = item.name
         repositoryDescription.text = item.description
         repositoryAuthor.text = item.owner.login
-//        forks.text = item.forks_count.toString()
-//        stars.text = item.stargazers_count.toString()
+        forks.text = item.forks_count.toString()
+        stars.text = item.stargazers_count.toString()
         Glide.with(itemView.context).load(item.owner.avatar_url).circleCrop().into(avatar)
     }
 }

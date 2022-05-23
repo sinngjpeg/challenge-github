@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    app:cardCornerRadius="4dp">
+    app:cardCornerRadius="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,17 +16,25 @@
             android:id="@+id/iv_user"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_margin="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
             app:layout_constraintEnd_toStartOf="@+id/gl_vertical"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/txt_repository_author"
             tools:src="@drawable/github" />
 
         <TextView
             android:id="@+id/txt_repository_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:gravity="start"
+            android:maxLines="1"
+            android:textColor="#FFC107"
+            android:textSize="21sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/gl_vertical"
             app:layout_constraintTop_toTopOf="parent"
@@ -35,7 +43,12 @@
         <TextView
             android:id="@+id/txt_repository_description"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:maxLines="5"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/gl_vertical"
             app:layout_constraintTop_toBottomOf="@+id/txt_repository_name"
@@ -45,25 +58,93 @@
             android:id="@+id/txt_repository_author"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:gravity="center"
+            android:maxLines="1"
+            android:padding="4dp"
             android:text="Autor"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/guideline2"
             app:layout_constraintEnd_toStartOf="@+id/gl_vertical"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_user" />
+            app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/gl_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="99dp" />
+            app:layout_constraintGuide_begin="107dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="104dp" />
+            app:layout_constraintGuide_begin="170dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="115dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="188dp" />
+
+        <ImageView
+            android:id="@+id/iv_fork"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/txt_repository_description"
+            app:srcCompat="@drawable/ic_fork" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="@+id/guideline5"
+            app:srcCompat="@drawable/ic_star" />
+
+        <TextView
+            android:id="@+id/txt_forks"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_fork"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintStart_toEndOf="@+id/iv_fork"
+            app:layout_constraintTop_toTopOf="@+id/iv_fork"
+            tools:text="Text" />
+
+        <TextView
+            android:id="@+id/txt_stars"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2"
+            tools:text="Text" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="106dp" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
