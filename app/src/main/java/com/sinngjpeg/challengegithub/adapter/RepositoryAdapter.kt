@@ -4,16 +4,18 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.sinngjpeg.challengegithub.R
+import com.sinngjpeg.challengegithub.databinding.ItemRepositoryBinding
+import com.sinngjpeg.challengegithub.model.GithubRepository
 import com.sinngjpeg.challengegithub.model.Item
-import com.sinngjpeg.challengegithub.viewmodel.RepositoryViewHolder
 
 class RepositoryAdapter(private val repository: List<Item>) :
     RecyclerView.Adapter<RepositoryViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RepositoryViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_repository, parent, false)
-        return RepositoryViewHolder(view)
+        val binding = ItemRepositoryBinding.inflate(
+            LayoutInflater.from(parent.context), parent, false
+        )
+        return RepositoryViewHolder(binding)
     }
 
     override fun getItemCount(): Int {
@@ -21,6 +23,7 @@ class RepositoryAdapter(private val repository: List<Item>) :
     }
 
     override fun onBindViewHolder(holder: RepositoryViewHolder, position: Int) {
-        return holder.bind(repository[position])
+        val repository: Item = repository[position]
+        holder.bind(repository)
     }
 }
