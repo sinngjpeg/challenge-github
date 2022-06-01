@@ -1,5 +1,6 @@
 package com.sinngjpeg.challengegithub.di
 
+import com.sinngjpeg.challengegithub.services.GithubService
 import com.sinngjpeg.challengegithub.utils.Constants
 import dagger.Module
 import dagger.Provides
@@ -32,6 +33,6 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun provideNoteServiceApi(retrofit: Retrofit): GithubAPI =
-        retrofit.create(GithubAPI::class.java)
+    fun provideNoteServiceApi(retrofit: Retrofit): GithubService =
+        retrofit.create(GithubService::class.java)
 }
