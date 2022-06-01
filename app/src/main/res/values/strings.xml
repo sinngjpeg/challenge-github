@@ -2,4 +2,8 @@
     <string name="app_name">Github App</string>
     <string name="no_pulls_found">No pulls found for this Repository</string>
     <string name="error">Something went wrong, try again in a few minutes</string>
+    <string name="title_pull_request_description">Título do pull request</string>
+    <string name="description_pull_request_description">Descrição do pull request</string>
+    <string name="username_pull_request_description">Nome do Usuario</string>
+    <string name="fullname_pull_request_description">Nome completo do usuário</string>
 </resources>
