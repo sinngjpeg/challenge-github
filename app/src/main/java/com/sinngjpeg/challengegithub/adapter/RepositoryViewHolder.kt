@@ -1,4 +1,4 @@
-package com.sinngjpeg.challengegithub.viewmodel
+package com.sinngjpeg.challengegithub.adapter
 
 import android.view.View
 import android.widget.ImageView
