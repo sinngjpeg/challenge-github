@@ -1,4 +1,4 @@
-package com.sinngjpeg.challengegithub.adapter
+package com.sinngjpeg.challengegithub.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,7 +9,6 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.sinngjpeg.challengegithub.R
 import com.sinngjpeg.challengegithub.databinding.ItemRepositoryBinding
 import com.sinngjpeg.challengegithub.model.Item
 

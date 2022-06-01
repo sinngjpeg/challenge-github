@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/repositoryFragment"
         android:name="com.sinngjpeg.challengegithub.ui.fragment.RepositoryFragment"
-        android:label="Github Kotlin Pop"
+        android:label="ListRepositoryFragment"
         tools:layout="@layout/fragment_list_repository">
 
         <action
@@ -20,11 +20,14 @@
     <fragment
         android:id="@+id/pullRequestFragment"
         android:name="com.sinngjpeg.challengegithub.ui.fragment.PullRequestFragment"
-        android:label="List Pull Request"
+        android:label="ListPullRequestFragment"
         tools:layout="@layout/fragment_list_pull_request">
 
         <argument
             android:name="repository"
+            app:argType="string" />
+        <argument
+            android:name="userName"
             app:argType="string" />
         <action
             android:id="@+id/action_pullRequestFragment_to_webViewFragment"
@@ -34,7 +37,7 @@
     <fragment
         android:id="@+id/webViewFragment"
         android:name="com.sinngjpeg.challengegithub.ui.fragment.WebViewFragment"
-        android:label="WebView">
+        android:label="WebViewFragment">
         <argument
             android:name="urlPull"
             app:argType="string" />

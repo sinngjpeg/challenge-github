@@ -62,13 +62,27 @@
             android:gravity="center"
             android:maxLines="1"
             android:padding="4dp"
-            tools:text="Autor"
-            android:textSize="16sp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/gl_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline5"
+            tools:text="Autor" />
+
+        <TextView
+            android:id="@+id/txt_repository_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/guideline2"
             app:layout_constraintEnd_toStartOf="@+id/gl_vertical"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline5" />
+            app:layout_constraintTop_toBottomOf="@id/txt_repository_author"
+            tools:text="Username" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/gl_vertical"
