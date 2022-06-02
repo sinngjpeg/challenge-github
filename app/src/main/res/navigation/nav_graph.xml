@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/repositoryFragment">
+
+    <fragment
+        android:id="@+id/repositoryFragment"
+        android:name="com.sinngjpeg.challengegithub.ui.fragment.RepositoryFragment"
+        android:label="Github Kotlin Pop"
+        tools:layout="@layout/fragment_list_repository">
+
+        <action
+            android:id="@+id/action_repositoryFragment_to_pullRequestFragment"
+            app:destination="@id/pullRequestFragment"
+            app:popUpTo="@id/pullRequestFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pullRequestFragment"
+        android:name="com.sinngjpeg.challengegithub.ui.fragment.PullRequestFragment"
+        android:label="ListPullRequestFragment"
+        tools:layout="@layout/fragment_list_pull_request">
+
+        <argument
+            android:name="repository"
+            app:argType="string" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_pullRequestFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.sinngjpeg.challengegithub.ui.fragment.WebViewFragment"
+        android:label="WebViewFragment">
+        <argument
+            android:name="urlPull"
+            app:argType="string" />
+        <argument
+            android:name="pullName"
+            app:argType="string" />
+    </fragment>
+</navigation>
