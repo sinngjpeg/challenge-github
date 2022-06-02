@@ -3,12 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/SInng/Desktop/projetos/challenge-github/app/src/main/res/layout/activity_main.xml" value="0.21603260869565216" />
-        <entry key="..\:/Users/SInng/Desktop/projetos/challenge-github/app/src/main/res/layout/fragment_list_pull_request.xml" value="0.2677083333333333" />
-        <entry key="..\:/Users/SInng/Desktop/projetos/challenge-github/app/src/main/res/layout/fragment_list_repository.xml" value="0.33" />
-        <entry key="..\:/Users/SInng/Desktop/projetos/challenge-github/app/src/main/res/layout/fragment_web_view.xml" value="0.13069908814589665" />
-        <entry key="..\:/Users/SInng/Desktop/projetos/challenge-github/app/src/main/res/layout/item_pull_request.xml" value="0.25" />
-        <entry key="..\:/Users/SInng/Desktop/projetos/challenge-github/app/src/main/res/layout/item_repository.xml" value="0.33" />
+        <entry key="..\:/Users/SInng/Desktop/projetos/challenge-github/app/src/main/res/layout/activity_main.xml" value="0.26875" />
+        <entry key="..\:/Users/SInng/Desktop/projetos/challenge-github/app/src/main/res/layout/fragment_list_pull_request.xml" value="0.19814814814814816" />
+        <entry key="..\:/Users/SInng/Desktop/projetos/challenge-github/app/src/main/res/layout/item_pull_request.xml" value="0.26875" />
+        <entry key="..\:/Users/SInng/Desktop/projetos/challenge-github/app/src/main/res/layout/item_repository.xml" value="0.19814814814814816" />
         <entry key="..\:/Users/Sinng/Projetos/challenge-github/app/src/main/res/drawable/ic_fork.xml" value="0.346782431052094" />
         <entry key="..\:/Users/Sinng/Projetos/challenge-github/app/src/main/res/drawable/ic_star.xml" value="0.346782431052094" />
         <entry key="..\:/Users/Sinng/Projetos/challenge-github/app/src/main/res/drawable/splash_bg.xml" value="0.196875" />

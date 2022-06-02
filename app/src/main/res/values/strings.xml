@@ -1,9 +1,10 @@
 <resources>
+    <!--    strings github kotlin pop -->
     <string name="app_name">Github App</string>
-    <string name="no_pulls_found">No pulls found for this Repository</string>
-    <string name="error">Something went wrong, try again in a few minutes</string>
+    <string name="no_pulls_found">Nenhum pull request encontrado para este repositório</string>
+    <string name="error">Algo deu errado, tente novamente em alguns minutos</string>
     <string name="title_pull_request_description">Título do pull request</string>
     <string name="description_pull_request_description">Descrição do pull request</string>
-    <string name="username_pull_request_description">Nome do Usuario</string>
+    <string name="username_pull_request_description">Nome do usuário</string>
     <string name="fullname_pull_request_description">Nome completo do usuário</string>
 </resources>

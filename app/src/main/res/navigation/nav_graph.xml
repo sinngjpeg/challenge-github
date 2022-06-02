@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/repositoryFragment"
         android:name="com.sinngjpeg.challengegithub.ui.fragment.RepositoryFragment"
-        android:label="ListRepositoryFragment"
+        android:label="Github Kotlin Pop"
         tools:layout="@layout/fragment_list_repository">
 
         <action

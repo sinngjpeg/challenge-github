@@ -4,10 +4,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.sinngjpeg.challengegithub.R
 import com.sinngjpeg.challengegithub.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
+import androidx.navigation.ui.setupActionBarWithNavController
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
