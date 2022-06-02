@@ -3,9 +3,7 @@ package com.sinngjpeg.challengegithub.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.sinngjpeg.challengegithub.R
 import com.sinngjpeg.challengegithub.databinding.ItemRepositoryBinding
-import com.sinngjpeg.challengegithub.model.GithubRepository
 import com.sinngjpeg.challengegithub.model.Item
 
 class RepositoryAdapter(private val repository: List<Item>) :

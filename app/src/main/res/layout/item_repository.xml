@@ -17,6 +17,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"
+            android:importantForAccessibility="no"
             app:layout_constraintBottom_toTopOf="@+id/guideline5"
             app:layout_constraintEnd_toStartOf="@+id/gl_vertical"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,8 +32,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:gravity="start"
+            android:contentDescription="@string/description_repository_name"
             android:maxLines="1"
-            android:textColor="#FFC107"
+            android:textColor="@color/orange"
             android:textSize="21sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -49,6 +51,7 @@
             android:layout_marginEnd="8dp"
             android:ellipsize="end"
             android:maxLines="4"
+            android:contentDescription="@string/description_repository_description"
             app:layout_constraintBottom_toTopOf="@+id/guideline5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/gl_vertical"
@@ -62,6 +65,7 @@
             android:layout_marginBottom="8dp"
             android:gravity="center"
             android:maxLines="1"
+            android:contentDescription="@string/description_repository_author"
             android:padding="4dp"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -103,6 +107,7 @@
             android:id="@+id/iv_fork"
             android:layout_width="20dp"
             android:layout_height="20dp"
+            android:importantForAccessibility="no"
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
             app:layout_constraintTop_toBottomOf="@+id/guideline5"
@@ -112,6 +117,7 @@
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
             android:layout_marginTop="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
@@ -121,6 +127,7 @@
         <TextView
             android:id="@+id/txt_forks"
             android:layout_width="0dp"
+            android:contentDescription="@string/description_forks"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             app:layout_constraintBottom_toBottomOf="@+id/iv_fork"
@@ -132,6 +139,7 @@
         <TextView
             android:id="@+id/txt_stars"
             android:layout_width="0dp"
+            android:contentDescription="@string/description_stars"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="@+id/imageView2"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
@@ -145,7 +153,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_begin="106dp" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

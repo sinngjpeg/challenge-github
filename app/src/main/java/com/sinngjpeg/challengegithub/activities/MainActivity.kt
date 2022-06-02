@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var layoutManager: LinearLayoutManager
     lateinit var githubAdapter: RepositoryAdapter
     lateinit var progressBar: ProgressBar
-    lateinit var repos: MutableList<Item>
+    lateinit var repositories: MutableList<Item>
     var pageNumber: Int = 1
     var isLoading: Boolean = false
 
@@ -35,18 +35,17 @@ class MainActivity : AppCompatActivity() {
         setTheme(R.style.Theme_ChallengeGithub)
         setContentView(binding.root)
 
-        recyclerView = findViewById(R.id.recycle_view)
-        progressBar = findViewById(R.id.progress_bar)
+        recyclerView = binding.recycleView
+        progressBar = binding.progressBar
         layoutManager = LinearLayoutManager(this@MainActivity)
         recyclerView.layoutManager = layoutManager
-        repos = arrayListOf()
+        repositories = arrayListOf()
 
-        getRepos(pageNumber)
-        githubScroll()
+        getRepositories(pageNumber)
+        scrollListener()
     }
 
-    private fun githubScroll() {
-
+    private fun scrollListener() {
         recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
 
@@ -55,10 +54,9 @@ class MainActivity : AppCompatActivity() {
                 val total = githubAdapter.itemCount
 
                 if (!isLoading) {
-
                     if ((visibleItemCount + lastVisibleItem) >= total) {
                         pageNumber++
-                        getRepos(pageNumber)
+                        getRepositories(pageNumber)
                     }
                 }
                 super.onScrolled(recyclerView, dx, dy)
@@ -66,8 +64,7 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    private fun getRepos(pageNumber: Int) {
-
+    private fun getRepositories(pageNumber: Int) {
         isLoading = true
         progressBar.visibility = View.VISIBLE
 
@@ -75,22 +72,18 @@ class MainActivity : AppCompatActivity() {
         val call = request.getRepositories(pageNumber)
 
         call.enqueue(object : Callback<GithubRepository> {
-
             override fun onResponse(
                 call: Call<GithubRepository>,
                 response: Response<GithubRepository>
             ) {
-
                 if (response.isSuccessful) {
-
-                    repos.addAll(response.body()!!.items)
-                    githubAdapter = RepositoryAdapter(repos)
+                    repositories.addAll(response.body()!!.items)
+                    githubAdapter = RepositoryAdapter(repositories)
 
                     if (pageNumber > 1) {
                         val lastVisibleItem = layoutManager.findLastCompletelyVisibleItemPosition()
                         githubAdapter.notifyItemInserted(lastVisibleItem)
                     } else {
-
                         recyclerView.apply {
                             setHasFixedSize(true)
                             adapter = githubAdapter

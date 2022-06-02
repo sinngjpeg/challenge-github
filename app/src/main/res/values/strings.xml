@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Github App</string>
+    <string name="description_repository_name">Nome do Repositório</string>
+    <string name="description_repository_description">Descrição do repositorio</string>
+    <string name="description_repository_author">Autor do repositório</string>
+    <string name="description_forks">quantidade de forks</string>
+    <string name="description_stars">quantidade de estrelas</string>
 </resources>
