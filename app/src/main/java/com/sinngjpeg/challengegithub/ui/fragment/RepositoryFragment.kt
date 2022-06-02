@@ -21,10 +21,8 @@ import kotlinx.coroutines.flow.collectLatest
 @AndroidEntryPoint
 class RepositoryFragment  : Fragment() {
 
-
     private var _binding: FragmentListRepositoryBinding? = null
     private val binding: FragmentListRepositoryBinding get() = _binding ?: throw Exception("")
-
     private val viewModel: RepositoryViewModel by viewModels()
 
     private val snackbar: Snackbar by lazy {
@@ -36,7 +34,6 @@ class RepositoryFragment  : Fragment() {
             setAction("ok") { requireActivity().finish() }
         }
     }
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -51,7 +48,6 @@ class RepositoryFragment  : Fragment() {
     }
 
     private fun initRecyclerView() {
-
         val adapterRepo = onClick()
 
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
