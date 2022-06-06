@@ -20,8 +20,6 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class PullRequestFragment : Fragment() {
-
-
     private var _binding: FragmentListPullRequestBinding? = null
     private val binding: FragmentListPullRequestBinding get() = _binding ?: throw Exception("")
 
@@ -81,14 +79,13 @@ class PullRequestFragment : Fragment() {
 
             } else {
                 _binding?.progressBarPullRequest?.visibility = View.INVISIBLE
-
             }
-
         })
 
-        viewModel.error.observe(this, {
+        viewModel.error.observe(viewLifecycleOwner) {
+            binding.errorMessage.text = it.message
             snackbar.show()
-        })
+        }
     }
 
 
